@@ -2,16 +2,16 @@ import MuiDrawer, { DrawerProps as MuiDrawerProps } from "@mui/material/Drawer";
 import { styled } from "@mui/material/styles";
 
 interface DrawerProps extends MuiDrawerProps {
-  drawerWidth?: number;
+  drawerwidth?: number;
 }
 
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
-})<DrawerProps>(({ theme, open, drawerWidth }) => ({
+})<DrawerProps>(({ theme, open, drawerwidth }) => ({
   "& .MuiDrawer-paper": {
     position: "relative",
     whiteSpace: "nowrap",
-    width: drawerWidth,
+    width: drawerwidth,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,

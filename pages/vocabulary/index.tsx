@@ -9,8 +9,8 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import Breadcrumb from "../../components/atoms/Breadcrumb";
-import Paragraph from "../../components/atoms/Paragraph";
+import Breadcrumb from "@components/atoms/Breadcrumb";
+import Paragraph from "@components/atoms/Paragraph";
 
 const Vocabulary = () => {
   return (

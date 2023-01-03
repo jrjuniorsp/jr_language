@@ -1,6 +1,6 @@
 import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
-import Drawer from "../../atoms/Drawer";
+import Drawer from "@components/atoms/Drawer";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
@@ -13,7 +13,7 @@ type Props = {
 
 const SidePanel = (props: Props) => {
   return (
-    <Drawer variant="permanent" open={props.open} drawerWidth={240}>
+    <Drawer variant="permanent" open={props.open} drawerwidth={240}>
       <Toolbar
         sx={{
           display: "flex",

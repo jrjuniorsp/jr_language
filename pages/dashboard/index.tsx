@@ -43,7 +43,7 @@ function Copyright(props: any) {
   );
 }
 
-const drawerWidth: number = 240;
+const drawerwidth: number = 240;
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
@@ -58,8 +58,8 @@ const AppBar = styled(MuiAppBar, {
     duration: theme.transitions.duration.leavingScreen,
   }),
   ...(open && {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: drawerwidth,
+    width: `calc(100% - ${drawerwidth}px)`,
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -73,7 +73,7 @@ const Drawer = styled(MuiDrawer, {
   "& .MuiDrawer-paper": {
     position: "relative",
     whiteSpace: "nowrap",
-    width: drawerWidth,
+    width: drawerwidth,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
