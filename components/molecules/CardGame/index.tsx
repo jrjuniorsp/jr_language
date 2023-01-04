@@ -11,6 +11,7 @@ import {
 import React from "react";
 import { red } from "@mui/material/colors";
 import TranslateType from "@utils/enum/translateType";
+import AppButton from "@components/atoms/AppButton";
 
 type Props = {
   word: String;
@@ -29,31 +30,32 @@ const CardGame = (props: Props) => {
   }
 
   return (
-    <Box sx={{ paddingTop: 2 }} component="div">
-      <Card>
-        <CardHeader
-          avatar={
-            <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-              T
-            </Avatar>
-          }
-          title={props.word}
-          subheader={subheaderText}
+    <Card>
+      <CardHeader
+        avatar={
+          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+            T
+          </Avatar>
+        }
+        title={props.word}
+        subheader={subheaderText}
+      />
+      <Divider />
+      <CardContent>
+        <TextField
+          id="outlined-basic"
+          label="Digite a Tradução"
+          variant="outlined"
+          fullWidth
         />
-        <Divider />
-        <CardContent>
-          <TextField
-            id="outlined-basic"
-            label="Digite a Tradução"
-            variant="outlined"
-            fullWidth
+        <Box sx={{ paddingTop: 1 }}>
+          <AppButton
+            label="Verificar"
+            handlerClick={() => console.log("AAAA")}
           />
-          <Box sx={{ paddingTop: 1 }}>
-            <Button variant="contained">Verificar</Button>
-          </Box>
-        </CardContent>
-      </Card>
-    </Box>
+        </Box>
+      </CardContent>
+    </Card>
   );
 };
 

@@ -1,18 +1,24 @@
 import {
   Box,
-  Button,
   FormControl,
   FormControlLabel,
   FormLabel,
   Radio,
   RadioGroup,
-  Typography,
 } from "@mui/material";
 import React from "react";
 import Breadcrumb from "@components/atoms/Breadcrumb";
 import Paragraph from "@components/atoms/Paragraph";
+import AppButton from "@components/atoms/AppButton";
+import { useRouter } from "next/router";
 
 const Vocabulary = () => {
+  const router = useRouter();
+
+  const doStart = () => {
+    router.push("/vocabulary/game");
+  };
+
   return (
     <React.Fragment>
       <Breadcrumb page="Vocabulário" />
@@ -41,7 +47,7 @@ const Vocabulary = () => {
         </RadioGroup>
       </FormControl>
       <Box>
-        <Button variant="contained">Iniciar</Button>
+        <AppButton label="Iniciar" handlerClick={doStart} />
       </Box>
     </React.Fragment>
   );
