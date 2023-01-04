@@ -29,31 +29,29 @@ const CardGame = (props: Props) => {
   }
 
   return (
-    <Box sx={{ paddingTop: 2 }} component="div">
-      <Card>
-        <CardHeader
-          avatar={
-            <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-              T
-            </Avatar>
-          }
-          title={props.word}
-          subheader={subheaderText}
+    <Card>
+      <CardHeader
+        avatar={
+          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+            T
+          </Avatar>
+        }
+        title={props.word}
+        subheader={subheaderText}
+      />
+      <Divider />
+      <CardContent>
+        <TextField
+          id="outlined-basic"
+          label="Digite a Tradução"
+          variant="outlined"
+          fullWidth
         />
-        <Divider />
-        <CardContent>
-          <TextField
-            id="outlined-basic"
-            label="Digite a Tradução"
-            variant="outlined"
-            fullWidth
-          />
-          <Box sx={{ paddingTop: 1 }}>
-            <Button variant="contained">Verificar</Button>
-          </Box>
-        </CardContent>
-      </Card>
-    </Box>
+        <Box sx={{ paddingTop: 1 }}>
+          <Button variant="contained">Verificar</Button>
+        </Box>
+      </CardContent>
+    </Card>
   );
 };
 
