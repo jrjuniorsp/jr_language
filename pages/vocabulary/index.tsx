@@ -11,6 +11,7 @@ import {
 import React from "react";
 import Breadcrumb from "@components/atoms/Breadcrumb";
 import Paragraph from "@components/atoms/Paragraph";
+import AppButton from "@components/atoms/AppButton";
 
 const Vocabulary = () => {
   return (
@@ -41,7 +42,7 @@ const Vocabulary = () => {
         </RadioGroup>
       </FormControl>
       <Box>
-        <Button variant="contained">Iniciar</Button>
+        <AppButton label="Iniciar" handlerClick={() => console.log("AAAA")} />
       </Box>
     </React.Fragment>
   );
