@@ -11,6 +11,7 @@ import {
 import React from "react";
 import { red } from "@mui/material/colors";
 import TranslateType from "@utils/enum/translateType";
+import AppButton from "@components/atoms/AppButton";
 
 type Props = {
   word: String;
@@ -48,7 +49,10 @@ const CardGame = (props: Props) => {
           fullWidth
         />
         <Box sx={{ paddingTop: 1 }}>
-          <Button variant="contained">Verificar</Button>
+          <AppButton
+            label="Verificar"
+            handlerClick={() => console.log("AAAA")}
+          />
         </Box>
       </CardContent>
     </Card>
